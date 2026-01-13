@@ -84,7 +84,7 @@ export const challenges: Challenge[] = [
   { name: 'Bandit: B&E', description: "As Bandit, kill the final boss with 'Lights Out'.", unlocks: ['Skills.Bandit2.SkullRevolver'], achievement: 'Bandit2RevolverFinale', icon: 'skills/bandit2/skull-revolver' },
   { name: 'Bandit: Mastery', description: "As Bandit, beat the game or obliterate on Monsoon'.", unlocks: ['Skills.Bandit2.Alt1'], achievement: 'Bandit2ClearGameMonsoon', icon: 'skins/bandit2/alt1' },
   { name: 'Bandit: Cleared Prime Meridian', description: 'As Bandit, complete the Event on Prime Meridian.', unlocks: [], achievement: 'Bandit2ClearMeridianEvent', icon: 'skins/bandit2/alt2' },
-  { name: 'Bandit: Accept and Decompile', description: 'As Bandit, accept the offering of the Collective.', unlocks: ['Skins.Bandit2.Alt2'], achievement: 'Bandit2Accept', icon: 'skins/bandit2/alt2' },
+  { name: 'Bandit: Accept and Decompile', description: 'As Bandit, accept the offering of the Collective.', unlocks: ['Skins.Bandit2.Alt2'], achievement: 'Bandit2Decompile', icon: 'skins/bandit2/alt2' },
 
   /* MUL-T */
   { name: 'Verified', description: 'Complete the first Teleporter event 5 times.', unlocks: ['Characters.Toolbot'], achievement: 'RepeatFirstTeleporter', icon: 'characters/toolbot' },
@@ -111,7 +111,7 @@ export const challenges: Challenge[] = [
   { name: 'Artificer: Chunked!', description: 'As Artificer, fully defeat the teleport boss in a one-second burst of damage.', unlocks: ['Skills.Mage.IceBomb'], achievement: 'MageFastBoss', icon: 'skills/mage/icebomb' },
   { name: 'Artificer: Mastery', description: 'As Artificer, beat the game or obliterate on Monsoon.', unlocks: ['Skins.Mage.Alt1'], achievement: 'MageClearGameMonsoon', icon: 'skins/mage/alt1' },
   { name: 'Artificer: Cleared Prime Meridian', description: 'As Artificer, complete the Event on Prime Meridian.', unlocks: [], achievement: 'MageClearMeridianEvent', icon: 'skins/mage/alt2' },
-  { name: 'Artificer: Accept and Decompile', description: 'As Artificer accept the offering of the Collective', unlocks: ['Skins.Mage.Alt2'], achievement: 'MageAccept', icon: 'skins/mage/alt2' },
+  { name: 'Artificer: Accept and Decompile', description: 'As Artificer accept the offering of the Collective', unlocks: ['Skins.Mage.Alt2'], achievement: 'MageDecompile', icon: 'skins/mage/alt2' },
 
   /* Mercenary */
   { name: 'True Respite', description: 'Obliterate yourself at the Obelisk.', unlocks: ['Characters.Mercenary'], achievement: 'CompleteUnknownEnding', icon: 'characters/mercenary' },
@@ -129,7 +129,7 @@ export const challenges: Challenge[] = [
   { name: 'REX: Dunked', description: 'As REX, kill a Clay Dunestrider on Abandoned Aqueduct by throwing it into a pit.', unlocks: ['Skills.Treebot.PlantSonicBoom'], achievement: 'TreebotDunkClayBoss', icon: 'skills/treebot/plantsonicboom' },
   { name: 'REX: Mastery', description: 'As REX, beat the game or obliterate on Monsoon.', unlocks: ['Skins.Treebot.Alt1'], achievement: 'TreebotClearGameMonsoon', icon: 'skins/treebot/alt1' },
   { name: 'REX: Cleared Prime Meridian', description: 'As REX, complete the Event on Prime Meridian.', unlocks: [], achievement: 'TreebotClearMeridianEvent', icon: 'skins/treebot/alt2' },
-  { name: 'Rex: Accept and Decompile', description: 'As Rex accept the offering of the Collective', unlocks: ['Skins.Treebot.Alt2'], achievement: 'TreebotAccept', icon: 'skins/treebot/alt2' },
+  { name: 'Rex: Accept and Decompile', description: 'As Rex accept the offering of the Collective', unlocks: ['Skins.Treebot.Alt2'], achievement: 'TreebotDecompile', icon: 'skins/treebot/alt2' },
 
   /* Loader */
   { name: 'Guidance Offline', description: 'Defeat the unique guardian of Siren\'s Call.', unlocks: ['Characters.Loader'], achievement: 'DefeatSuperRoboBallBoss', icon: 'characters/loader' },
@@ -138,7 +138,7 @@ export const challenges: Challenge[] = [
   { name: 'Loader: The Thunderdome', description: "As Loader, kill three other Loaders in the Bulwark's ambry.", unlocks: ['Skills.Loader.Thunderslam'], achievement: 'LoaderKillLoaders', icon: 'skills/loader/thunderslam' },
   { name: 'Loader: Mastery', description: 'As Loader, beat the game or obliterate on Monsoon.', unlocks: ['Skins.Loader.Alt1'], achievement: 'LoaderClearGameMonsoon', icon: 'skins/loader/alt1' },
   { name: 'Loader: Cleared Prime Meridian', description: 'As Loader, complete the Event on Prime Meridian.', unlocks: [], achievement: 'LoaderClearMeridianEvent', icon: 'skins/loader/alt2' },
-  { name: 'Loader: Accept and Decompile', description: 'As Loader accept the offering of the Collective', unlocks: ['Skins.Loader.Alt2'], achievement: 'LoaderAccept', icon: 'skins/loader/alt2' },
+  { name: 'Loader: Accept and Decompile', description: 'As Loader accept the offering of the Collective', unlocks: ['Skins.Loader.Alt2'], achievement: 'LoaderDecompile', icon: 'skins/loader/alt2' },
 
   /* Acrid */
   { name: '...To Be Left Alone', description: 'Stabilize the Cell in the Void Fields.', unlocks: ['Characters.Croco'], achievement: 'BeatArena', icon: 'characters/croco' },
@@ -156,7 +156,7 @@ export const challenges: Challenge[] = [
   { name: 'Captain: Smushed', description: 'As Captain, kill the final boss using a Supply Beacon.', unlocks: ['Skills.Captain.UtilityAlt1'], achievement: 'CaptainSupplyDropFinale', icon: 'skills/captain/utility-alt1' },
   { name: 'Captain: Mastery', description: 'As Captain, beat the game or obliterate on Monsoon.', unlocks: ['Skins.Captain.Alt1'], achievement: 'CaptainClearGameMonsoon', icon: 'skins/captain/alt1' },
   { name: 'Captain: Cleared Prime Meridian', description: 'As Captain, complete the Event on Prime Meridian.', unlocks: [], achievement: 'CaptainClearMeridianEvent', icon: 'skins/captain/alt2' },
-  { name: 'Captain: Accept and Decompile', description: 'As Captain accept the offering of the Collective', unlocks: ['Skins.Captain.Alt2'], achievement: 'CaptainAccept', icon: 'skins/captain/alt2' },
+  { name: 'Captain: Accept and Decompile', description: 'As Captain accept the offering of the Collective', unlocks: ['Skins.Captain.Alt2'], achievement: 'CaptainDecompile', icon: 'skins/captain/alt2' },
 
   /* Railgunner */
   { name: 'Railgunner: Marksman', description: 'As Railgunner, fire 30 consecutive sniper shots without missing a Weak Point.', unlocks: ['Skills.Railgunner.SecondaryAlt1'], achievement: 'RailgunnerConsecutiveWeakPoints', icon: 'skills/railgunner/marksman' },
@@ -173,22 +173,22 @@ export const challenges: Challenge[] = [
   /* Seeker */
   { name: 'Seeker: Airborne Souls', description: 'As Seeker, hit three or more airborne enemies with a single use of the exploding third hit of Spirit Punch.', unlocks: ['Skills.Seeker.SoulSearch'], achievement: 'SeekerAirMultiHit', icon: 'skills/seeker/soulsearch' },
   { name: 'Seeker: Mastery', description: 'As Seeker, beat the game or obliterate on Monsoon.', unlocks: ['Skins.Seeker.Alt1'], achievement: 'SeekerClearGameMonsoon', icon: 'skins/seeker/alt1' },
-  { name: 'Seeker: Clear Mind', description: 'As Seeker, meditate 20 times without missing an input in a single run.', unlocks: ['Skills.Seeker.PalmBlast'], achievement: 'SeekerMeditate', icon: 'skills/seeker/palmblast' },
-  { name: 'Seeker: Scorched Earth', description: 'Deal 500,000% damage with one use of Sojourn\'s explosion', unlocks: ['Skills.Seeker.Reprieve'], achievement: 'SeekerSojournDamage', icon: 'skills/seeker/reprieve' },
+  { name: 'Seeker: Clear Mind', description: 'As Seeker, meditate 20 times without missing an input in a single run.', unlocks: ['Skills.Seeker.PalmBlast'], achievement: 'SeekerPerfect20Meditation', icon: 'skills/seeker/palmblast' },
+  { name: 'Seeker: Scorched Earth', description: 'Deal 500,000% damage with one use of Sojourn\'s explosion', unlocks: ['Skills.Seeker.Reprieve'], achievement: 'NukeSojourn', icon: 'skills/seeker/reprieve' },
 
   /* CHEF */
   { name: 'Order Up!', description: 'Complete the Wok\'s recipe in Reformed Altar.', unlocks: ['Characters.Chef'], achievement: 'ActivateChef', icon: 'characters/chef' },
   { name: 'Chef: Barbecued Bison Recipe Complete', description: 'As Chef complete 10 recipes by searing an oiled bison with Sear.', unlocks: ['Skills.Chef.YesChef'], achievement: 'BarbecueQuantityBisonInRun', icon: 'skills/chef/searbison' },
   { name: 'Chef: Mastery', description: 'As Chef, beat the game or obliterate on Monsoon.', unlocks: ['Skins.Chef.Alt1'], achievement: 'ChefClearGameMonsoon', icon: 'skins/chef/alt1' },
-  { name: 'CHEF: You’ve Always Been Crazy', description: 'As CHEF hit five airborne enemies with one instance of Roll.', unlocks: ['Skills.Chef.RollAlt'], achievement: 'ChefMultiRoll', icon: 'skills/chef/rollalt' },
-  { name: 'CHEF: It’s Getting Hot In Here!', description: 'As CHEF apply 20 stacks of Burn at once to the final boss.', unlocks: ['Skills.Chef.Oil'], achievement: 'ChefBurnBoss', icon: 'skills/chef/oil' },
+  { name: 'CHEF: You’ve Always Been Crazy', description: 'As CHEF hit five airborne enemies with one instance of Roll.', unlocks: ['Skills.Chef.RollAlt'], achievement: 'RolyPolyHitFiveAirEnemies', icon: 'skills/chef/rollalt' },
+  { name: 'CHEF: It’s Getting Hot In Here!', description: 'As CHEF apply 20 stacks of Burn at once to the final boss.', unlocks: ['Skills.Chef.Oil'], achievement: 'BurnMithrix', icon: 'skills/chef/oil' },
 
   /* False Son */
   { name: 'Purified Freedom', description: 'Purify the Heart of the False Son using the Halcyon Seed.', unlocks: ['Characters.FalseSon'], achievement: 'UnlockFalseSon', icon: 'characters/falseson' },
   { name: 'False Son: Stare Them Down', description: 'As False Son, kill 15 enemies with one activation of Laser of the Father.', unlocks: ['Skills.FalseSon.LaserBurst'], achievement: 'FalseSonLaserMultiKill', icon: 'skills/falseson/laserburst' },
   { name: 'False Son: Mastery', description: 'As False Son, beat the game or obliterate on Monsoon.', unlocks: ['Skins.FalseSon.Alt1'], achievement: 'FalseSonClearGameMonsoon', icon: 'skins/falseson/alt1' },
-  { name: 'False Son: Family Bonding', description: 'As False Son, have Aurelionite kill the final boss while the final boss is inflicted with at least one Lunar Ruin.', unlocks: ['Skills.FalseSon.Unknown'], achievement: 'FalseSonBossWithAurelionite', icon: 'skills/falseson/unknown' },
-  { name: 'False Son: Protein Heavy Diet', description: 'As False Son, gain up to 40 Lunar Spikes through Growth.', unlocks: ['Skills.FalseSon.LunarStakes'], achievement: 'FalseSonLunarSpikes', icon: 'skills/falseson/lunarstakes' },
+  { name: 'False Son: Family Bonding', description: 'As False Son, have Aurelionite kill the final boss while the final boss is inflicted with at least one Lunar Ruin.', unlocks: ['Skills.FalseSon.Unknown'], achievement: 'FalseSonKillMithrixWithGoldenGal', icon: 'skills/falseson/unknown' },
+  { name: 'False Son: Protein Heavy Diet', description: 'As False Son, gain up to 40 Lunar Spikes through Growth.', unlocks: ['Skills.FalseSon.LunarStakes'], achievement: 'FalseSonGrowthChallenge', icon: 'skills/falseson/lunarstakes' },
 
   /* Drifter */
   { name: 'Lost in Transit', description: 'Free the Drifter from the Prison Matrix in Solutional Haunt.', unlocks: ['Characters.Drifter'], achievement: 'FreeDrifter', icon: 'characters/drifter' },
