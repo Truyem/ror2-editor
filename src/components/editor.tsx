@@ -10,6 +10,7 @@ interface Props {
 
 export default function Editor({ savedata }: Props): React.JSX.Element {
   const coins = savedata.querySelector("coins")!.innerHTML;
+  const name = savedata.querySelector("name")!.innerHTML;
   const stats = savedata.querySelector("stats")!;
 
   const [achievements, setAchievements] = useState(
@@ -17,7 +18,15 @@ export default function Editor({ savedata }: Props): React.JSX.Element {
   );
 
   const changeCoins = (value: string): void => {
-    savedata.querySelector("coins")!.innerHTML = value;
+    let num = parseInt(value, 10);
+    if (isNaN(num)) num = 0;
+    if (num < 0) num = 0;
+    if (num > 2147483647) num = 2147483647;
+    savedata.querySelector("coins")!.innerHTML = num.toString();
+  };
+
+  const changeName = (value: string): void => {
+    savedata.querySelector("name")!.innerHTML = value;
   };
 
   const changeChallenge = (challenge: Challenge, checked: boolean): void => {
@@ -209,8 +218,33 @@ export default function Editor({ savedata }: Props): React.JSX.Element {
     challenges.forEach((challenge) => changeChallenge(challenge, true));
   };
 
+  const unlockGroup = (groupChallenges: readonly Challenge[]): void => {
+    groupChallenges.forEach((challenge) => changeChallenge(challenge, true));
+  };
+
+  const categories = {
+    Characters: challenges.filter((c) => c.icon.startsWith("characters/")),
+    Items: challenges.filter((c) => c.icon.startsWith("items/")),
+    Artifacts: challenges.filter((c) => c.icon.startsWith("artifacts/")),
+    Skills: challenges.filter((c) => c.icon.startsWith("skills/")),
+    Skins: challenges.filter((c) => c.icon.startsWith("skins/")),
+  };
+
   return (
     <div>
+      <div className="form-group row">
+        <label htmlFor="name" className="label">
+          Profile Name
+        </label>
+        <input
+          type="text"
+          className="form-control"
+          id="name"
+          defaultValue={name}
+          onChange={(e) => changeName(e.target.value)}
+        />
+      </div>
+
       <div className="form-group row">
         <label htmlFor="coins" className="label">
           Lunar Coins
@@ -221,29 +255,52 @@ export default function Editor({ savedata }: Props): React.JSX.Element {
           id="coins"
           defaultValue={coins}
           min="0"
+          max="2147483647"
           onChange={(e) => changeCoins(e.target.value)}
         />
       </div>
 
       <div
         style={{
-          display: "flex",
-          justifyContent: "space-between",
           marginBottom: "1rem",
         }}
       >
-        <h2>Challenge</h2>
-        <Button onClick={unlockAll}>Unlock all</Button>
-      </div>
+        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "1rem", alignItems: "center" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <h2>Global Controls</h2>
+            <span style={{ fontSize: "1.2rem", color: "#66cc66", fontWeight: "bold" }}>
+              {challenges.filter(c => achievements.includes(c.achievement)).length} / {challenges.length}
+            </span>
+          </div>
+          <Button onClick={unlockAll}>Unlock Everything</Button>
+        </div>
 
-      <div className="challenge-grid">
-        {challenges.map((challenge) => (
-          <ChallengeBox
-            key={challenge.achievement}
-            challenge={challenge}
-            achievements={achievements}
-            onToggle={changeChallenge}
-          />
+        {Object.entries(categories).map(([name, groupChallenges]) => (
+          <div key={name} style={{ marginBottom: "2rem" }}>
+            <div style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginBottom: "1rem",
+              borderBottom: "2px solid #444",
+              paddingBottom: "0.5rem"
+            }}>
+              <h2 style={{ margin: 0 }}>{name}</h2>
+              <Button onClick={() => unlockGroup(groupChallenges)}>
+                Unlock All {name}
+              </Button>
+            </div>
+            <div className="challenge-grid">
+              {groupChallenges.map((challenge) => (
+                <ChallengeBox
+                  key={challenge.achievement}
+                  challenge={challenge}
+                  achievements={achievements}
+                  onToggle={changeChallenge}
+                />
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </div>
